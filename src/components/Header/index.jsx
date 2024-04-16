@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import style from './Header.module.css';
 
 const Header = () => {
   return (
-    <header>
-      <nav>
-        <ul>
+    <header className={style.header}>
+      <nav className={style.nav}>
+        <ul className={style.navList}>
           <li>
             <Link href="/">
               <p>Home</p>
