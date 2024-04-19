@@ -1,5 +1,5 @@
 .header {
-  background-color: #190147;
+  background-color: #8aa7ff;
 }
 
 .nav {
@@ -19,7 +19,16 @@
   color: #333;
 }
 
+.link.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 @media (prefers-color-scheme: dark) {
+  .header {
+    background-color: #190147;
+  }
+
   .navList li:hover {
     color: #ccc;
   }
