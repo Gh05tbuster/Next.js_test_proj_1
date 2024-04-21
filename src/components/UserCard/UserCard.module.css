@@ -1,0 +1,26 @@
+.userCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+  background-color: #222;
+  border: 2px solid #333;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.userCard img {
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 16px;
+}
