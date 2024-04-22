@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import style from './[userId].module.css';
 
 export default function UserPage() {
   const pathname = usePathname();
@@ -21,8 +22,8 @@ export default function UserPage() {
   }
 
   return (
-    <div>
-      <h1>{`${user.first_name} ${user.last_name}`}</h1>
+    <div className="container">
+      <h1 className={style.title}>{`${user.first_name} ${user.last_name}`}</h1>
       {user.avatar && (
         <Image
           src={user.avatar}
@@ -32,7 +33,12 @@ export default function UserPage() {
           quality={100}
         />
       )}
-      <p>Email: {user.email}</p>
+      <p className={style.text}>
+        Email:&nbsp;
+        <a target="blank" href={`mailto:${user.email}`} className={style.email}>
+          {user.email}
+        </a>
+      </p>
     </div>
   );
 }

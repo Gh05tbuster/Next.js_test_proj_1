@@ -1,0 +1,17 @@
+.title {
+  font-size: 28px;
+}
+
+.email {
+  color: #00a;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .email {
+    color: rgb(60, 60, 255);
+  }
+}

@@ -1,15 +1,20 @@
 .userCard {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   gap: 5px;
   align-items: center;
   padding: 10px;
   margin: 20px;
-  background-color: #222;
-  border: 2px solid #333;
+  background-color: #ddd;
+  border: 2px solid #ccc;
   border-radius: 8px;
   width: 400px;
+  min-height: 400px;
+}
+
+.userCard:hover {
+  box-shadow: 0 0 20px 5px #0003;
 }
 
 .userCard img {
@@ -23,4 +28,15 @@
 
 .text {
   font-size: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .userCard {
+    background-color: #222;
+    border-color: #333;
+  }
+
+  .userCard:hover {
+    box-shadow: 0 0 20px 5px #fff3;
+  }
 }

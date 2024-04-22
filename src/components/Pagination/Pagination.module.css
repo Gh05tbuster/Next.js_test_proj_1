@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  font-size: 18px;
+  min-width: 15px;
+}
+
+.btn:hover {
+  text-decoration: underline;
+}
+
+.btn.active {
+  font-weight: bold;
+}
+
+.btn.active:hover,
+.btn.extreme {
+  text-decoration: none;
+}

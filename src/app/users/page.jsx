@@ -4,6 +4,7 @@ import Pagination from '@/components/Pagination';
 import UserCard from '@/components/UserCard';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import style from './users.module.css';
 
 export default function Users() {
   const [users, setUsers] = useState([]);
@@ -24,17 +25,18 @@ export default function Users() {
 
   return (
     <>
-      {users.map((user) => (
-        <Link href={`/users/${user.id}`} key={user.id}>
-          <UserCard
-            id={user.id}
-            img={user.avatar}
-            name={`${user.first_name} ${user.last_name}`}
-            email={user.email}
-          />
-        </Link>
-      ))}
-
+      <div className={style.container}>
+        {users.map((user) => (
+          <Link href={`/users/${user.id}`} key={user.id}>
+            <UserCard
+              id={user.id}
+              img={user.avatar}
+              name={`${user.first_name} ${user.last_name}`}
+              email={user.email}
+            />
+          </Link>
+        ))}
+      </div>
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
