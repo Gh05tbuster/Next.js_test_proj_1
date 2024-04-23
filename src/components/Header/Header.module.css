@@ -1,7 +1,9 @@
 .header {
-  background-color: #8aa7ff;
-  box-shadow: 0 10px 20px 10px #8aa7ff;
+  background-color: var(--header-bg);
+  box-shadow: 0 10px 20px 10px var(--header-bg);
   margin-bottom: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .container {
@@ -42,6 +44,7 @@
 }
 
 .nav .navList .link {
+  text-align: center;
   padding: 5px;
 }
 
@@ -66,11 +69,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .header {
-    background-color: #190147;
-    box-shadow: 0 10px 20px 10px #190147;
-  }
-
   .nav .navList .link:hover {
     color: #ccc;
   }
@@ -81,5 +79,61 @@
 
   .btn:hover {
     background-color: #ccc6;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 0;
+  }
+
+  .container {
+    align-items: stretch;
+  }
+
+  .nav .navList {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+  }
+
+  .nav .navList .link {
+    border-bottom: 2px solid #000;
+  }
+
+  .nav .navList .link.active {
+    text-decoration: none;
+    background-color: #444a;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .nav .navList .link {
+      border-bottom: 2px solid #fff;
+    }
+
+    .nav .navList .link.active {
+      text-decoration: none;
+      background-color: #ccca;
+    }
   }
 }

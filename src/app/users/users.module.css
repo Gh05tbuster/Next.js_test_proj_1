@@ -3,8 +3,9 @@
   margin-right: auto;
   width: 100%;
   max-width: 1440px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
